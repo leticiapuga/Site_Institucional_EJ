@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "servicos")
-public class Servico {
+public class ServicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,5 +22,5 @@ public class Servico {
 
     // Relacionamento com Cases (Um serviço tem vários cases)
     @OneToMany(mappedBy = "servico") 
-    private List<CasosSuceso> cases; 
+    private List<CasosSucesoEntity> cases; 
 }

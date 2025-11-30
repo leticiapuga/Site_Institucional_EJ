@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "contatos_fale_conosco")
-public class Contanto { // Nome igual ao arquivo dele
+public class ContantoEntity { // Nome igual ao arquivo dele
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

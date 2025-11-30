@@ -1,16 +1,18 @@
 package com.include.inovale.landingpage.models.entities;
 
+import java.util.UUID;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "cases_sucesso")
-public class CasosSuceso { // O nome da classe tem que ser igual ao arquivo (Suceso)
+public class CasosSucesoEntity { // O nome da classe tem que ser igual ao arquivo (Suceso)
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue()
+    private UUID id;
 
     private String nomeProjeto;
     
@@ -26,5 +28,5 @@ public class CasosSuceso { // O nome da classe tem que ser igual ao arquivo (Suc
 
     @ManyToOne
     @JoinColumn(name = "servico_id") 
-    private Servico servico;
+    private ServicoEntity servico;
 }

@@ -46,6 +46,8 @@ public class SecurityConfiguration {
                     ).permitAll()
                     .requestMatchers(HttpMethod.POST, "/auth/entrar").permitAll()
                     .requestMatchers(HttpMethod.GET, "/auth/validar/*").permitAll()
+                    .requestMatchers(HttpMethod.GET, "/membro").permitAll()
+                    .requestMatchers(HttpMethod.GET, "/membro/*").permitAll()
                     .requestMatchers(HttpMethod.POST, "/auth/registrar").permitAll()
                     .requestMatchers(HttpMethod.POST, "/recuperarSenha/gerarCodigo").permitAll()
                     .requestMatchers(HttpMethod.PATCH, "/recuperarSenha/atualizar/*").permitAll()

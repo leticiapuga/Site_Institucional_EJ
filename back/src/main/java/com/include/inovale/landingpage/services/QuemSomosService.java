@@ -20,8 +20,12 @@ import lombok.RequiredArgsConstructor;
 public class QuemSomosService {
     private final QuemSomosRepository quemSomosRepository;
     private final QuemSomosMapper quemSomosMapper;
+    private final UsuarioAutenticadoService usuarioAutenticadoService;
 
     public ResQuemSomosDTO criarMembro(ReqQuemSomosDTO dto){
+        // VERIFICANDO SE O USUÁRIO É ADMIN PARA REALIZAR A AÇÃO
+        usuarioAutenticadoService.verificaPapelAdmin();
+
         QuemSomosEntity membro = quemSomosMapper.toEntity(dto);
         quemSomosRepository.save(membro);
 
@@ -29,6 +33,9 @@ public class QuemSomosService {
     }
 
     public ResQuemSomosDTO deletarMembro(UUID id){
+        // VERIFICANDO SE O USUÁRIO É ADMIN PARA REALIZAR A AÇÃO
+        usuarioAutenticadoService.verificaPapelAdmin();
+
         QuemSomosEntity membro = quemSomosRepository.getReferenceById(id);
         if (membro == null) throw new ResponseStatusException(
             HttpStatus.BAD_REQUEST, "Não há usuário registrado com esse id"
@@ -57,6 +64,9 @@ public class QuemSomosService {
     }
 
     public ResQuemSomosDTO editarMembro(ResQuemSomosDTO dto){
+        // VERIFICANDO SE O USUÁRIO É ADMIN PARA REALIZAR A AÇÃO
+        usuarioAutenticadoService.verificaPapelAdmin();
+        
         QuemSomosEntity membro = quemSomosRepository.getReferenceById(dto.getId());
         membro = quemSomosMapper.atualizarQuemSomosEntity(membro, dto);
         quemSomosRepository.save(membro);

@@ -42,4 +42,14 @@ public class ServicoMapper {
 
         return servicosDTO;
     }
+
+    public ServicoEntity atualizarEntity(ServicoEntity servicoEntity, ReqServicoDTO dto){
+        
+
+        if(dto.getTitulo() != null) servicoEntity.setTitulo(dto.getTitulo());
+        if(dto.getDescricao() != null) servicoEntity.setDescricao(dto.getDescricao());
+        if(dto.getImagemUrl() != null) servicoEntity.setImagemUrl(dto.getImagemUrl());
+
+        return servicoEntity;
+    }
 }

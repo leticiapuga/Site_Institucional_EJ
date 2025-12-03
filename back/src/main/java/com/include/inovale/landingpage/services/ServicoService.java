@@ -39,5 +39,24 @@ public class ServicoService {
         return servicoMapper.toListResDTO(servicoRepository.findAll());
     }
 
+    // EDITAR (Admin)
+    public ResServicoDTO editarServico(UUID id, ReqServicoDTO dto){
+        usuarioAutenticadoService.verificaPapelAdmin();
+
+        ServicoEntity servicoEntity = servicoRepository.getReferenceById(id);
+        servicoEntity = servicoMapper.atualizarEntity(servicoEntity, dto);
+
+        servicoRepository.save(servicoEntity);
+
+        return servicoMapper.toResDTO(servicoEntity);
+    }
+
+    // APAGAR (Admin)
+    public void apagarServico(UUID id){
+        usuarioAutenticadoService.verificaPapelAdmin();
+
+        servicoRepository.deleteById(id);
+    }
+
 
 }

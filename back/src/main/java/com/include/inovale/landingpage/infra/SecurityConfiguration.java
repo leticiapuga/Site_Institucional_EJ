@@ -1,4 +1,3 @@
-
 package com.include.inovale.landingpage.infra;
 
 import org.springframework.context.annotation.Bean;
@@ -24,49 +23,62 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
     private final SecurityFilter securityFilter;
 
-    // Esse filtro tem a função de definir se o usuário terá acesso ao recurso 
-    // solicitado ou não
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 // DESABILITANDO O LOGIN PADRÃO DO SPRING SECURITY
                 .csrf(csrf -> csrf.disable())
-                // DEFININDO QUE NÃO SERÁ GUARDADO O ESTADO DA SEÇÃO
-                // PADRÃO REST
+                // DEFININDO QUE NÃO SERÁ GUARDADO O ESTADO DA SESSÃO (PADRÃO REST)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // ROTAS PUBLICAS
-                .authorizeHttpRequests( authorize -> authorize
-                    .requestMatchers(
-                        HttpMethod.GET,
-                        "/v3/api-docs",
-                        "/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/swagger-ui/index.html",
-                        "/swagger-ui/index.html/**"
-                    ).permitAll()
-                    .requestMatchers(HttpMethod.POST, "/auth/entrar").permitAll()
-                    .requestMatchers(HttpMethod.GET, "/auth/validar/*").permitAll()
-                    .requestMatchers(HttpMethod.GET, "/membro").permitAll()
-                    .requestMatchers(HttpMethod.GET, "/membro/*").permitAll()
-                    .requestMatchers(HttpMethod.POST, "/auth/registrar").permitAll()
-                    .requestMatchers(HttpMethod.PATCH, "/recuperarSenha/atualizar/*").permitAll()
-                    .requestMatchers(HttpMethod.POST, "/recuperarSenha/gerarCodigo").permitAll()
-                    .requestMatchers(HttpMethod.POST, "/contato").permitAll()
-                    // QUALQUER ROTA DIFERENTE DAS QUE ESTÃO LISTADAS ACIMA
-                    // NECESSITAM DE AUTENTICAÇÃO
-                    .anyRequest().authenticated()
-                ).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
-                .build();
+                .authorizeHttpRequests(authorize -> authorize
+                        // --- DOCUMENTAÇÃO (SWAGGER) ---
+                        .requestMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/swagger-ui/index.html/**").permitAll()
 
+                        // --- AUTENTICAÇÃO ---
+                        .requestMatchers(HttpMethod.POST, "/auth/entrar").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/auth/registrar").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/auth/validar/*").permitAll()
+                        
+                        // --- RECUPERAÇÃO DE SENHA ---
+                        .requestMatchers(HttpMethod.POST, "/recuperarSenha/gerarCodigo").permitAll()
+                        .requestMatchers(HttpMethod.PATCH, "/recuperarSenha/atualizar/*").permitAll()
+
+                        // --- QUEM SOMOS (MEMBROS) ---
+                        .requestMatchers(HttpMethod.GET, "/membro").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/membro/*").permitAll()
+
+                        // --- CONTATO (FALE CONOSCO) ---
+                        // Qualquer um pode enviar mensagem (POST)
+                        .requestMatchers(HttpMethod.POST, "/contato").permitAll()
+
+                        // --- SERVIÇOS ---
+                        // Qualquer um pode ver a lista de serviços (GET)
+                        .requestMatchers(HttpMethod.GET, "/servico").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/servico/*").permitAll()
+
+                        // --- PARCERIAS (NOVO) ---
+                        // Qualquer um pode ver as parcerias (GET)
+                        .requestMatchers(HttpMethod.GET, "/parceria").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/parceria/*").permitAll()
+
+                        // --- QUALQUER OUTRA ROTA ---
+                        // Precisa de login (Token)
+                        .anyRequest().authenticated()
+                )
+                .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration auth) throws Exception{
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration auth) throws Exception {
         return auth.getAuthenticationManager();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }

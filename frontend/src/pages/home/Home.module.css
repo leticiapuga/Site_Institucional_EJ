@@ -1,17 +1,19 @@
-html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: "Poppins", sans-serif; /* moderna e legível */
-	background-color: #ffffff;
-	color: #fff;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .homeContainer {
-    width: 100%;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	overflow: auto;
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }

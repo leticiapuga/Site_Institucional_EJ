@@ -1,74 +1,91 @@
 .navbar {
-    display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #0d384c;
-	color: rgb(0, 0, 0);
-	width: 100%;
-	height: 65px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-	position: relative;
-	z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d384c;
+  width: 100vw;
+  max-width: 100vw;
+  height: 65px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+  padding: 0 32px;
+  box-sizing: border-box;
 }
 
-.navbarActions{
-	display: flex;
-	gap: 15px;
-	align-items: center;
+.logo img {
+  height: 45px;
+  width: auto;
+  display: block;
+  padding-left: 5px;
 }
 
-.actionButton{
-	text-decoration: none;
-	padding: 10px 20px;
-	border-radius: 5px;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	display: inline-block;
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+  transition: color 0.2s;
+  padding: 4px 0;
+}
+
+.navItem a.active,
+.navItem a:focus {
+  color: #e95c0c;
+  font-weight: 500;
+}
+
+.navItem a:hover {
+  color: #e95c0c;
+}
+
+.navbarActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.actionButton {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  background-color: #e65e0d;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  display: inline-block;
 }
 
 .actionButton:hover {
-    background-color: rgb(230, 85, 35);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px) scale(1.03);
+  color: #e65e0d;
 }
 
-.loginButton{
-	background-color: rgb(250, 101, 46);
-	color: white;
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+  .navList {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .navbarActions {
+    margin-top: 12px;
+  }
 }
-
-.signupButton{
-	background-color: rgb(250, 101, 46);
-	color: white;
-}
-
-.navList{
-	list-style: none;
-	display: flex;
-	gap: 30px;
-	align-items: center;
-	color: white;
-}
-
-.navList a {
-	text-decoration: none;
-	color: white;
-}
-
-.navList a:hover {
-    opacity: 0.7;
-}
-
-.logo img{
-    height: 45px;
-    width: auto;
-    display: block;
-	padding-left: 5px;
-}
-
-.navLeft{
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-

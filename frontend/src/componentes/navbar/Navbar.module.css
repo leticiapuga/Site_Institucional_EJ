@@ -3,12 +3,15 @@
   align-items: center;
   justify-content: space-between;
   background-color: #0d384c;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: 65px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   padding: 0 32px;
   box-sizing: border-box;
 }
@@ -32,7 +35,7 @@
 .navItem a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-family: "Poppins", Arial, sans-serif;
   transition: color 0.2s;
   padding: 4px 0;
@@ -59,7 +62,7 @@
   padding: 10px 20px;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   background-color: #e65e0d;
   color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

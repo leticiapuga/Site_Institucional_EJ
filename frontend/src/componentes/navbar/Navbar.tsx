@@ -10,7 +10,7 @@ export default function Navbar() {
       </div>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link to="/inicio">Início</Link>
+          <Link to="/">Início</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/servicos">Serviços</Link>
@@ -19,7 +19,7 @@ export default function Navbar() {
           <Link to="/nossosMembros">Nossos membros</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/faleConosco">Fale conosco</Link>
+          <Link to="/contactus">Fale conosco</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/casosDeSucesso">Casos de sucesso</Link>
@@ -30,13 +30,13 @@ export default function Navbar() {
       </ul>
       <div className={styles.navbarActions}>
         <Link
-          to="/entrar"
+          to="/login"
           className={`${styles.actionButton} ${styles.loginButton}`}
         >
           Entrar
         </Link>
         <Link
-          to="/cadastre-se"
+          to="/register"
           className={`${styles.actionButton} ${styles.signupButton}`}
         >
           Cadastre-se

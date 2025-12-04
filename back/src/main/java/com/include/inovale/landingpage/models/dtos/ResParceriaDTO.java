@@ -1,5 +1,6 @@
 package com.include.inovale.landingpage.models.dtos;
 
+import java.time.LocalDate;
 import java.util.UUID;
 import lombok.Data;
 
@@ -9,4 +10,6 @@ public class ResParceriaDTO {
     private String nomeEmpresa;
     private String logoUrl;
     private String siteUrl;
+    private LocalDate inicioParceria;
+
 }

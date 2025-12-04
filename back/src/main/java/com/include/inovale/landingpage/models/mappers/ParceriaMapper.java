@@ -15,6 +15,8 @@ public class ParceriaMapper {
         entity.setNomeEmpresa(dto.getNomeEmpresa());
         entity.setLogoUrl(dto.getLogoUrl());
         entity.setSiteUrl(dto.getSiteUrl());
+        entity.setInicioParceria(dto.getInicioParceria());
+
         return entity;
     }
 
@@ -24,6 +26,7 @@ public class ParceriaMapper {
         dto.setNomeEmpresa(entity.getNomeEmpresa());
         dto.setLogoUrl(entity.getLogoUrl());
         dto.setSiteUrl(entity.getSiteUrl());
+        dto.setInicioParceria(entity.getInicioParceria());
         return dto;
     }
 
@@ -41,6 +44,7 @@ public class ParceriaMapper {
         if (dto.getNomeEmpresa() != null) entity.setNomeEmpresa(dto.getNomeEmpresa());
         if (dto.getLogoUrl() != null) entity.setLogoUrl(dto.getLogoUrl());
         if (dto.getSiteUrl() != null) entity.setSiteUrl(dto.getSiteUrl());
+        if (dto.getInicioParceria() != null) entity.setInicioParceria(dto.getInicioParceria());
         return entity;
     }
 }

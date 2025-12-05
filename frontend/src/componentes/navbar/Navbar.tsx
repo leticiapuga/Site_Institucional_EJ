@@ -16,7 +16,7 @@ export default function Navbar() {
           <Link to="/servicos">Serviços</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/nossosMembros">Nossos membros</Link>
+          <Link to="/members">Nossos membros</Link> {/* aponta para /members */}
         </li>
         <li className={styles.navItem}>
           <Link to="/contactus">Fale conosco</Link>

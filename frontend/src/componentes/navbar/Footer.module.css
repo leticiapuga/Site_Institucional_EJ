@@ -104,6 +104,43 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    gap: 28px;
+    padding: 32px 4vw;
+  }
+  .logo {
+    width: 360px;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+  .list {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .logoSection {
+    width: 100%;
+    align-items: center;
+  }
+  .logo {
+    width: 300px;
+  }
+  .column {
+    width: 100%;
+  }
+  .list {
+    font-size: 0.9rem;
+  }
+}
+
 .rodape {
   background-color: #0d384c;
   color: white;

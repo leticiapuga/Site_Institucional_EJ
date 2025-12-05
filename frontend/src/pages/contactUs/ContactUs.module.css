@@ -140,23 +140,73 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+@media (max-width: 1200px) {
+  .formWrapper {
+    max-width: 1000px;
+  }
+  .formFields {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    margin-top: 64px;
+    font-size: 1.9rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  .formWrapper {
+    max-width: 920px;
+    min-height: 280px;
+  }
+  .imageArea {
+    min-width: 180px;
+  }
+  .form {
+    padding: 20px 12px;
+  }
+  .button {
+    padding: 12px 80px;
+  }
+}
+
 @media (max-width: 900px) {
   .formWrapper {
     flex-direction: column;
-    max-width: 98vw;
+    max-width: 96vw;
     min-height: 0;
   }
   .imageArea {
     min-width: 100%;
-    min-height: 120px;
+    min-height: 160px;
     border-radius: 12px 12px 0 0;
   }
   .form {
-    padding: 16px 4px 16px 4px;
+    padding: 16px 8px;
     max-width: 100vw;
+  }
+  .formFields {
+    max-width: 92vw;
   }
   .input,
   .textarea {
-    max-width: 98vw;
+    max-width: 92vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    margin-top: 56px;
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .button {
+    padding: 12px 68px;
+    font-size: 0.95rem;
   }
 }

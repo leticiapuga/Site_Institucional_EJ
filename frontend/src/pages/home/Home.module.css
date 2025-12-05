@@ -17,3 +17,19 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .homeContainer {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    min-height: calc(100vh - 65px);
+    padding: 8px 12px;
+  }
+  .homeContainer h1 {
+    font-size: 2rem;
+  }
+}

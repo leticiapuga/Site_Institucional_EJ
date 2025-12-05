@@ -37,6 +37,10 @@ public class SecurityConfiguration {
                         // Permite que qualquer um veja os Cases de Sucesso (GET)
                         .requestMatchers(HttpMethod.GET, "/cases").permitAll()
                         .requestMatchers(HttpMethod.GET, "/cases/*").permitAll()
+
+                        // --- CONTA GOOGLE PARA ENVIO DE EMAIL ---
+                        .requestMatchers(HttpMethod.GET, "/gmail/callback").permitAll()
+
                         // --- DOCUMENTAÇÃO (SWAGGER) ---
                         .requestMatchers(HttpMethod.GET, "/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/swagger-ui/**").permitAll()

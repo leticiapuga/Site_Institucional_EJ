@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to="/contactus">Fale conosco</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/casosDeSucesso">Casos de sucesso</Link>
+          <Link to="/casosSucesso">Casos de sucesso</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/parcerias">Parcerias</Link>

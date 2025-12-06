@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.casosContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #444;
+}
+
+.casosCotainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff5722;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.casosCotainer p {
+  font-size: 1rem;
+  color: #0c3845;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.casosSucessoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.casosSucessoContainer > div {
+  width: 100%;
+  max-width: 800px;
+}
+
+.casosSucessoContainer > div h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+  margin: 2px 0 20px 0;
+  padding-left: 0;
+}

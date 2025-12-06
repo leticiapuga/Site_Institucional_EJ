@@ -40,7 +40,7 @@ export default function Register() {
             </label>
           </div>
 
-          <button type="submit">Entrar</button>
+          <button className={styles.buttonLogin} type="submit">Entrar</button>
         </form>
         <div className={styles.links}>
           <span>

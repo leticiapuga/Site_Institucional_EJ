@@ -11,7 +11,7 @@ export default function Navbar() {
                 </div>
                     <ul className={styles.navList}>
                         <li className={styles.navItem}>
-                            <Link to="/inicio">Inicio</Link>
+                            <Link to="/">Inicio</Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="/servicos">Serviços</Link>

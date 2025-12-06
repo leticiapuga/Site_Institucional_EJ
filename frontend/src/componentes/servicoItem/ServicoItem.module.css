@@ -1,0 +1,116 @@
+.servicoItem {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 40px;
+    margin-bottom: 50px;
+    width: 100%; 
+    height: auto;
+    align-items: stretch;
+
+   
+    
+}
+
+
+.servicoTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 50%; 
+    height: auto; 
+    
+    align-items: flex-start;
+    
+     
+}
+
+
+.servicoTexto h1 {
+    font-size: 36px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    color: #0C3845;
+    margin: 0;
+}
+
+.servicoTexto p {
+    font-size: 24px;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    color: #0C3845;
+    text-align: left;
+    margin: 0;
+}
+
+.buttonServico {
+    border: none;
+    align-self: flex-start;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: #E65E0D;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 18px;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.servicosImage {
+    width: 50%; 
+    height: auto;
+    object-fit: cover; 
+    
+    align-self: stretch; 
+   
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.inverter-ordem {
+    flex-direction: row-reverse;
+}
+
+
+
+@media (max-width: 768px) {
+    .servicoItem {
+        flex-direction: column; 
+        padding: 30px 20px; 
+        gap: 20px; 
+    }
+
+    .servicoTexto,
+    .servicosImage {
+        width: 100%; 
+    }
+    
+    .servicoTexto {
+        
+        align-items: center; 
+    }
+    
+    .servicoTexto h1,
+    .servicoTexto p {
+        text-align: center;
+        font-size: 18px; 
+    }
+    
+    .servicoTexto h1 {
+        font-size: 28px;
+    }
+    
+    .button {
+       
+        align-self: center; 
+    }
+    
+    .servicosImage {
+      
+        max-height: 300px; 
+    }
+}

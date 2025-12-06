@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import logo from "../../assets/logo_inovale.svg";
 
 export default function Navbar() {
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -45,3 +46,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

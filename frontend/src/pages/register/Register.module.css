@@ -72,7 +72,7 @@ input[type="password"] {
   color: #acacac;
 }
 
-button {
+.buttonLogin {
   background: #0c3845;
   color: #fff;
   border: none;
@@ -91,7 +91,7 @@ button {
   text-align: center;
 }
 
-button:hover {
+.buttonLogin:hover {
   background: #e95c0c;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
   transform: translateY(-1px) scale(1.03);

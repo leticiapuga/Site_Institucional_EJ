@@ -1,17 +1,204 @@
 html, body {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: "Poppins", sans-serif; /* moderna e legível */
-	background-color: #ffffff;
-	color: #fff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+    overflow-x: hidden; /* impede rolagem horizontal */
 }
 
 .homeContainer {
     width: 100%;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	overflow: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+
+.sessaoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* <- LIBERA largura full */
+    justify-content: center;
+    text-align: center;    
+
+    height: 500px;
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #EE7802 0%,
+        #D9830A 33%,
+        #725E27 80%,
+        #0C3845 100%
+    );
+
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+p {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+	font-family: "Urbanist", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.buttonHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+	width: auto;
+    height: 60px;
+
+    margin-top: 20px;
+
+    background: #fcfcfc;
+    color: #0C3845;
+
+    font-size: 24px;
+    border: none;
+    
+
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.sessaoSobreNos {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 621px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+
+    padding: 20px;
+}
+
+.textoSobreNos {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.textoSobreNos p {
+    font-size: 26px;
+	font-family: "Urbanist", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+
+.sessaoMissaoVisaoValores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding-top: 50px;
+
+    background-color: #ffffff;
+    color: #0C3845;
+}
+
+.textoDescricao {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+	margin-bottom: 50px;
+}
+
+.sessaoMissaoVisaoValores h1 {
+    font-size: 35px;
+}
+
+.sessaoMissaoVisaoValores p {
+    font-size: 30px;
+	font-family: "Urbanist", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+.sessaoMissaoVisaoValores img {
+    height: 200px;
+    width: 200px;
+}
+
+.missaoContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.descricaoMissao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap; /* permite quebrar linha ao diminuir largura */
+
+    gap: 40px;
+    padding: 30px 40px;
+
+    width: 100%;
+    max-width: 1400px;
+
+    border-radius: 5px;
+    background-color: #F1F1F1;
+	margin-top: 50px;
+    margin-bottom: 50px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.iconeMissao {
+    width: 180px;
+    height: auto;
+}
+
+.descricaoMissao p {
+    font-size: 26px;
+    max-width: 1100px;
+    color: #000;
+    text-align: left;
+}
+
+

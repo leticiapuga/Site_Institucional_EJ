@@ -1,35 +1,48 @@
 .cardContainer {
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 32px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
-.cardParceiro{
-    background: #eeeeee;
-    width: 220px;
-    height: 250px;
-    padding: 16px;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 40px;
+.cardParceiro {
+  background: #eeeeee;
+  width: 220px;
+  height: 250px;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04),
+    0 8px 20px rgba(16, 24, 40, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cardImage{
-    width: 140px;
+.cardParceiro:hover {
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06),
+    0 12px 28px rgba(16, 24, 40, 0.12);
+  transform: translateY(-2px);
 }
 
-.cardParceiro h1{
-    font-size: 18px;
-    margin-top: 12px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    
+.cardImage {
+  width: 140px;
 }
 
-.cardParceiro p{
-    font-size: 14px;
-    color: #3b3b3b;
-    margin-top: 4px;
+.cardParceiro h1 {
+  color: #0c3845;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cardParceiro p {
+  font-size: 14px;
+  color: #0c3845;
+  margin-top: 4px;
 }

@@ -1,30 +1,23 @@
 import styles from "./CardParceiro.module.css";
-import logo from "../../assets/logo_inovale.svg";
 
-interface ParceirosItemProps {
-    titulo: string;
-    descricao: string;
-    botaoTexto: string;
-    imagemSrc: string; 
-    onClick: () => void; 
+interface ParceiroProps {
+  titulo: string;
+  descricao: string;
+  imagemSrc: string;
 }
 
-const CardParceiro: React.FC<ParceirosItemProps> = ({
-    titulo,
-    descricao,
-    imagemSrc,
-    onClick}) => {
-
+const CardParceiro: React.FC<ParceiroProps> = ({
+  titulo,
+  descricao,
+  imagemSrc,
+}) => {
   return (
     <div className={styles.cardParceiro}>
-        <img 
-            src={imagemSrc}
-            className={styles.cardImage} 
-        />
-        <h1>{titulo}</h1>
-        <p>{descricao}</p>
+      <img src={imagemSrc} className={styles.cardImage} alt={titulo} />
+      <h1>{titulo}</h1>
+      <p>{descricao}</p>
     </div>
   );
-}
+};
 
 export default CardParceiro;

@@ -10,50 +10,58 @@ body {
   overflow-x: hidden;
 }
 
-.partnerCotainer {
+.container {
   width: 100%;
-  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 0;
   display: flex;
   flex-direction: column;
-  color: #444;
+  align-items: center;
 }
 
-.partnerCotainer h1 {
+.title {
+  text-align: center;
+  color: #e95c0c;
   font-size: 2rem;
-  font-weight: 700;
-  color: #ff5722;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 10px;
-}
-
-.partnerCotainer p {
-  font-size: 1rem;
-  color: #0c3845;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 40px auto;
-  padding: 0 20px;
-  line-height: 1.5;
-}
-
-.partnershipsContainerucessoContainer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 50px;
-}
-
-.partnershipsContainerContainer > div {
-  width: 100%;
-  max-width: 800px;
-}
-
-.partnershipsContainer > div h1 {
-  font-size: 1.5rem;
   font-weight: 600;
-  color: #444;
-  text-align: left;
-  margin: 2px 0 20px 0;
-  padding-left: 0;
+  margin-top: 80px;
+  margin-bottom: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.subtitle {
+  text-align: center;
+  color: #0c3845;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  max-width: 700px;
+  font-family: "Urbanist", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    margin-top: 60px;
+    font-size: 1.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }

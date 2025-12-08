@@ -28,7 +28,7 @@ const ServicoItem: React.FC<ServicoItemProps> = ({
     return (
         <div className={itemClasses}>
             
-            {/* Coluna de Texto */}
+            
             <div className={styles.servicoTexto}>
                 <h1>{titulo}</h1>
                 <p>{descricao}</p>
@@ -40,7 +40,6 @@ const ServicoItem: React.FC<ServicoItemProps> = ({
                 </button>
             </div>
 
-            {/* Coluna da Imagem */}
             <img 
                 src={imagemSrc} 
                 alt={titulo} 

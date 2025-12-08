@@ -1,3 +1,18 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.servicoItem.inverter-ordem {
+  flex-direction: row-reverse !important;
+}
 .servicosContainer {
   width: 100%;
   min-height: 100vh;
@@ -9,100 +24,85 @@
 .conhecerContainer {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  max-width: 1100px;
-  padding: 5vh 2vw;
-  margin-top: 2%;
+  width: 100%;
+  max-width: 1235px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
+  padding: 50px;
 }
 
 .conhecerContainer h1 {
-  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-size: 36px;
   margin-bottom: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   color: #e65e0d;
+  font-style: normal;
 }
 
 .conhecerContainer p {
-  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  font-size: 24px;
   font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   color: #0c3845;
+  font-style: normal;
 }
 
 .servicosList {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  max-width: 1100px;
-  padding: 5vh 2vw;
-  margin-bottom: 80px;
-  gap: 6vh;
-
+  width: 100%;
+  padding: 80px;
+  max-width: 1235px;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
   background-color: #f1f1f1;
   color: #0c3845;
-  align-items: center;
 }
 
 .servicoItem {
   display: flex;
   flex-direction: row;
-  gap: 2.5vw;
-  max-height: 480px;
-  width: 100%;
+  gap: 40px;
+  height: auto;
+  max-height: 466px;
   align-items: stretch;
 }
 
 .servicoTexto {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+
   width: 50%;
-  height: auto;
+  height: 100%;
+
+  align-items: flex-start;
 }
 
 .servicoTexto h1 {
-  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+  font-size: 36px;
+
   font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   color: #0c3845;
+  font-style: normal;
 }
 
 .servicoTexto p {
-  font-size: clamp(1rem, 1.4vw, 1.4rem);
+  font-size: 24px;
   font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   color: #0c3845;
+  font-style: normal;
   text-align: left;
-}
-
-.servicosImage {
-  width: 50%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.servicoItem.inverter-ordem {
-  flex-direction: row-reverse !important;
-}
-
-@media (max-width: 768px) {
-  .servicosList {
-    width: 95%;
-    padding: 40px 10px;
-  }
-
-  .servicoItem {
-    flex-direction: column;
-    max-height: none;
-  }
-
-  .servicoTexto {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-
-  .servicosImage {
-    width: 100%;
-    max-height: 320px;
-  }
 }

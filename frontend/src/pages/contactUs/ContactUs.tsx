@@ -25,7 +25,7 @@ export default function ContactUs() {
     setLoading(true);
     setSuccess(false);
     try {
-      const res = await fetch(" adicionar", {
+      const res = await fetch(" Adicionar ", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

@@ -14,149 +14,149 @@ export default function Members() {
   const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setMembers([
-        { id: 1, nome: "Sarah Vitória", cargo: "VPGG", diretoria: "Diretores" },
-        {
-          id: 2,
-          nome: "Maria Eduarda",
-          cargo: "Comercial",
-          diretoria: "Diretores",
-        },
-        {
-          id: 3,
-          nome: "Gustavo Barros",
-          cargo: "Projetos",
-          diretoria: "Diretores",
-        },
-        {
-          id: 4,
-          nome: "Ana Cecília",
-          cargo: "Marketing",
-          diretoria: "Coordenadores",
-        },
-        {
-          id: 5,
-          nome: "Sara Queiroz",
-          cargo: "Projetos",
-          diretoria: "Coordenadores",
-        },
-        {
-          id: 6,
-          nome: "Ana Letícia",
-          cargo: "Experiência do Cliente",
-          diretoria: "Coordenadores",
-        },
-        {
-          id: 7,
-          nome: "Arthur Alves",
-          cargo: "Em análise",
-          diretoria: "Gerentes de Projetos",
-        },
-        {
-          id: 8,
-          nome: "Antônio Marcelo",
-          cargo: "Em análise",
-          diretoria: "Gerentes de Projetos",
-        },
-        {
-          id: 9,
-          nome: "Liana Souza",
-          cargo: "Em análise",
-          diretoria: "Gestores da Presidência",
-        },
-        {
-          id: 10,
-          nome: "Isabelly Lima",
-          cargo: "Em análise",
-          diretoria: "Gestores da Presidência",
-        },
-        {
-          id: 11,
-          nome: "Diogo Victor",
-          cargo: "Em análise",
-          diretoria: "Gestores da Presidência",
-        },
-        {
-          id: 12,
-          nome: "Carlos David",
-          cargo: "Em análise",
-          diretoria: "Assessores de Gestão de Pessoas",
-        },
-        {
-          id: 13,
-          nome: "Maria Izabel",
-          cargo: "Em análise",
-          diretoria: "Assessores de Gestão de Pessoas",
-        },
-        {
-          id: 14,
-          nome: "Lucas Kauã",
-          cargo: "Em análise",
-          diretoria: "Assessores do Adm. Financeiro",
-        },
-        {
-          id: 15,
-          nome: "Liana Souza",
-          cargo: "Em análise",
-          diretoria: "Assessores do Adm. Financeiro",
-        },
-        {
-          id: 16,
-          nome: "Maria Isabele",
-          cargo: "Em análise",
-          diretoria: "Analistas de Marketing",
-        },
-        {
-          id: 17,
-          nome: "Hellen",
-          cargo: "Em análise",
-          diretoria: "Analistas de Marketing",
-        },
-        {
-          id: 18,
-          nome: "Ana Clara",
-          cargo: "Em análise",
-          diretoria: "Consultoras de Vendas",
-        },
-        {
-          id: 19,
-          nome: "Mirelly",
-          cargo: "Em análise",
-          diretoria: "Consultoras de Vendas",
-        },
-        {
-          id: 20,
-          nome: "Patrícia",
-          cargo: "Em análise",
-          diretoria: "Assessora de Experiência do Cliente",
-        },
-        {
-          id: 21,
-          nome: "Gabrielly Oliveira",
-          cargo: "Em análise",
-          diretoria: "Analistas de P&D",
-        },
-        {
-          id: 22,
-          nome: "Antônio Marcelo",
-          cargo: "Em análise",
-          diretoria: "Analistas de P&D",
-        },
-        {
-          id: 23,
-          nome: "Isabelly Lima",
-          cargo: "Em análise",
-          diretoria: "Analistas de P&D",
-        },
-        {
-          id: 24,
-          nome: "Yan Lopes",
-          cargo: "Em análise",
-          diretoria: "Analistas de P&D",
-        },
-      ]);
-    }, 500);
+    // setTimeout(() => {
+    setMembers([
+      { id: 1, nome: "Sarah Vitória", cargo: "VPGG", diretoria: "Diretores" },
+      {
+        id: 2,
+        nome: "Maria Eduarda",
+        cargo: "Comercial",
+        diretoria: "Diretores",
+      },
+      {
+        id: 3,
+        nome: "Gustavo Barros",
+        cargo: "Projetos",
+        diretoria: "Diretores",
+      },
+      {
+        id: 4,
+        nome: "Ana Cecília",
+        cargo: "Marketing",
+        diretoria: "Coordenadores",
+      },
+      {
+        id: 5,
+        nome: "Sara Queiroz",
+        cargo: "Projetos",
+        diretoria: "Coordenadores",
+      },
+      {
+        id: 6,
+        nome: "Ana Letícia",
+        cargo: "Experiência do Cliente",
+        diretoria: "Coordenadores",
+      },
+      {
+        id: 7,
+        nome: "Arthur Alves",
+        cargo: "Em análise",
+        diretoria: "Gerentes de Projetos",
+      },
+      {
+        id: 8,
+        nome: "Antônio Marcelo",
+        cargo: "Em análise",
+        diretoria: "Gerentes de Projetos",
+      },
+      {
+        id: 9,
+        nome: "Liana Souza",
+        cargo: "Em análise",
+        diretoria: "Gestores da Presidência",
+      },
+      {
+        id: 10,
+        nome: "Isabelly Lima",
+        cargo: "Em análise",
+        diretoria: "Gestores da Presidência",
+      },
+      {
+        id: 11,
+        nome: "Diogo Victor",
+        cargo: "Em análise",
+        diretoria: "Gestores da Presidência",
+      },
+      {
+        id: 12,
+        nome: "Carlos David",
+        cargo: "Em análise",
+        diretoria: "Assessores de Gestão de Pessoas",
+      },
+      {
+        id: 13,
+        nome: "Maria Izabel",
+        cargo: "Em análise",
+        diretoria: "Assessores de Gestão de Pessoas",
+      },
+      {
+        id: 14,
+        nome: "Lucas Kauã",
+        cargo: "Em análise",
+        diretoria: "Assessores do Adm. Financeiro",
+      },
+      {
+        id: 15,
+        nome: "Liana Souza",
+        cargo: "Em análise",
+        diretoria: "Assessores do Adm. Financeiro",
+      },
+      {
+        id: 16,
+        nome: "Maria Isabele",
+        cargo: "Em análise",
+        diretoria: "Analistas de Marketing",
+      },
+      {
+        id: 17,
+        nome: "Hellen",
+        cargo: "Em análise",
+        diretoria: "Analistas de Marketing",
+      },
+      {
+        id: 18,
+        nome: "Ana Clara",
+        cargo: "Em análise",
+        diretoria: "Consultoras de Vendas",
+      },
+      {
+        id: 19,
+        nome: "Mirelly",
+        cargo: "Em análise",
+        diretoria: "Consultoras de Vendas",
+      },
+      {
+        id: 20,
+        nome: "Patrícia",
+        cargo: "Em análise",
+        diretoria: "Assessora de Experiência do Cliente",
+      },
+      {
+        id: 21,
+        nome: "Gabrielly Oliveira",
+        cargo: "Em análise",
+        diretoria: "Analistas de P&D",
+      },
+      {
+        id: 22,
+        nome: "Antônio Marcelo",
+        cargo: "Em análise",
+        diretoria: "Analistas de P&D",
+      },
+      {
+        id: 23,
+        nome: "Isabelly Lima",
+        cargo: "Em análise",
+        diretoria: "Analistas de P&D",
+      },
+      {
+        id: 24,
+        nome: "Yan Lopes",
+        cargo: "Em análise",
+        diretoria: "Analistas de P&D",
+      },
+    ]);
+    // }, 500);
   }, []);
 
   const diretorias = [

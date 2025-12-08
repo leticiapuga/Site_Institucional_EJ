@@ -16,64 +16,64 @@ export default function Partnerships() {
   const [parceiros, setParceiros] = useState<Parceiro[]>([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setParceiros([
-        {
-          id: 1,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2023",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 2,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2020",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 3,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2019",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 4,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2019",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 5,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2023",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 6,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2020",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 7,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2019",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 8,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2023",
-          imagemSrc: logoInovale,
-        },
-        {
-          id: 9,
-          titulo: "Empresa",
-          descricao: "Parceiros desde 2020",
-          imagemSrc: logoInovale,
-        },
-      ]);
-    }, 500);
+    // setTimeout(() => {
+    setParceiros([
+      {
+        id: 1,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2023",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 2,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2020",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 3,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2019",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 4,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2019",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 5,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2023",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 6,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2020",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 7,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2019",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 8,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2023",
+        imagemSrc: logoInovale,
+      },
+      {
+        id: 9,
+        titulo: "Empresa",
+        descricao: "Parceiros desde 2020",
+        imagemSrc: logoInovale,
+      },
+    ]);
+    // }, 500);
   }, []);
 
   return (

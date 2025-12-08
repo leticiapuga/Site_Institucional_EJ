@@ -1,110 +1,108 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: #ffffff;
-    color: #fff;
-    overflow-x: hidden; 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 .servicoItem.inverter-ordem {
-    flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
 }
 .servicosContainer {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .conhecerContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1235px;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1235px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    padding: 50px;
+  padding: 50px;
 }
 
 .conhecerContainer h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    color: #E65E0D;
-    font-style: normal;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: #e65e0d;
+  font-style: normal;
 }
 
 .conhecerContainer p {
-    font-size: 24px;
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    color: #0C3845;
-    font-style: normal;
+  font-size: 24px;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #0c3845;
+  font-style: normal;
 }
 
-.servicosList{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 80px;
-    max-width: 1235px;
-    height: auto;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    background-color: #F1F1F1;
-    color: #0C3845;
-    
+.servicosList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 80px;
+  max-width: 1235px;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #0c3845;
 }
 
 .servicoItem {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    height: auto;
-    max-height: 466px;
-    align-items: stretch;      
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  height: auto;
+  max-height: 466px;
+  align-items: stretch;
 }
 
 .servicoTexto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
-    width: 50%;
-    height: 100%;    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    align-items: flex-start;
+  width: 50%;
+  height: 100%;
+
+  align-items: flex-start;
 }
 
 .servicoTexto h1 {
-    font-size: 36px;
-    
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    color: #0C3845;
-    font-style: normal;
+  font-size: 36px;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: #0c3845;
+  font-style: normal;
 }
 
 .servicoTexto p {
-    font-size: 24px;
-    font-family: "Urbanist", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    color: #0C3845;
-    font-style: normal;
-    text-align: left;
+  font-size: 24px;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #0c3845;
+  font-style: normal;
+  text-align: left;
 }
-
-

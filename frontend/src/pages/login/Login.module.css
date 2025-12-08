@@ -83,7 +83,7 @@ input[type="password"] {
 }
 
 .buttonLogin {
-  background: #450c0c;
+  background: #0c3845;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -103,6 +103,8 @@ input[type="password"] {
 
 .buttonLogin:hover {
   background: #e95c0c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px) scale(1.03);
 }
 
 .links {
@@ -121,6 +123,15 @@ input[type="password"] {
   text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+  .logo {
+    width: 420px;
+  }
+  .form {
+    max-width: 360px;
+  }
+}
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -130,5 +141,28 @@ input[type="password"] {
     flex: unset;
     width: 100%;
     min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    min-height: calc(100vh - 65px);
+  }
+  .brandSection,
+  .formSection {
+    padding: 24px 16px;
+    min-height: 280px;
+  }
+  .logo {
+    width: 300px;
+  }
+  .form {
+    max-width: 90vw;
+    gap: 14px;
+  }
+  button {
+    padding: 12px 80px;
+    font-size: 0.95rem;
   }
 }

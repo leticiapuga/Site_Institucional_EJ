@@ -1,0 +1,221 @@
+.cardsRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.page {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+.title {
+  text-align: center;
+  color: #e95c0c;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 88px;
+}
+
+.cardsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.cardsRowSingle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  min-height: 120px;
+}
+.cardsRowSingle .card {
+  margin: 0 auto;
+}
+.subtitle {
+  text-align: center;
+  color: #0c3845;
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+  font-family: "Urbanist", sans-serif;
+}
+.section {
+  margin: 24px 0 40px;
+}
+.sectionTitle {
+  text-align: center;
+  color: #0c3845;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
+.cardsGrid > .card:nth-last-child(1):nth-child(3n + 1) {
+  grid-column: 2 / span 1;
+}
+.cardsGrid > .card:nth-last-child(1):nth-child(3n + 2) {
+  grid-column: 2 / span 1;
+}
+
+.cardsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.card {
+  width: 260px;
+  min-height: 90px;
+  background: #eeeeee;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04),
+    0 8px 20px rgba(16, 24, 40, 0.08);
+  border: rgba(16, 24, 40, 0.06);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cardsRow .card:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:hover {
+  box-shadow: 0 2px 6px rgba(16, 24, 40, 0.06),
+    0 12px 28px rgba(16, 24, 40, 0.12);
+  transform: translateY(-2px);
+}
+.name {
+  color: #e95c0c;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.role {
+  color: #355463;
+  font-size: 0.95rem;
+  font-family: "Urbanist", sans-serif;
+}
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    margin-top: 76px;
+    font-size: 1.8rem;
+  }
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .cardsRow {
+    gap: 18px;
+  }
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+.form {
+  background: #eeeeee;
+  padding: 28px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 320px;
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  color: #0c3845;
+  font-size: 0.98rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 2px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.98rem;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-weight: 400;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.button {
+  background: #e65e0d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  width: 100%;
+}
+
+.button:hover {
+  background: #fff;
+  color: #e65e0d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px) scale(1.03);
+}
+
+.messagesList {
+  background: #f2f2f2;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 320px;
+  min-height: 120px;
+  font-size: 0.98rem;
+  font-weight: 400;
+}

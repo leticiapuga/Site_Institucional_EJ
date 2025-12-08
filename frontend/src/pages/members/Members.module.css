@@ -145,3 +145,77 @@
     max-width: 320px;
   }
 }
+.form {
+  background: #eeeeee;
+  padding: 28px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 320px;
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  color: #0c3845;
+  font-size: 0.98rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 2px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.98rem;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  font-weight: 400;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.button {
+  background: #e65e0d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  width: 100%;
+}
+
+.button:hover {
+  background: #fff;
+  color: #e65e0d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px) scale(1.03);
+}
+
+.messagesList {
+  background: #f2f2f2;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 320px;
+  min-height: 120px;
+  font-size: 0.98rem;
+  font-weight: 400;
+}

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
 import logoInovale from "../../assets/logo_login_e_cadastro.png";
+import API from "../../services/api";
 
 export default function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
+  const [form, setForm] = useState({ email: "", senha: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -11,33 +12,23 @@ export default function Login() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function validatePassword(password: string) {
-    const regex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*_\-\.])[A-Za-z\d!@#$%&*_\-\.]{8,64}$/;
-    return regex.test(password);
-  }
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    setLoading(true);
 
-    if (!validatePassword(form.password)) {
-      setError(
-        "A senha deve ter entre 8 e 64 caracteres, conter ao menos uma letra maiúscula, uma minúscula, um número e um caractere especial (!@#$%&*_-.)."
-      );
-      setLoading(false);
-      return;
-    }
     try {
-      const res = await fetch(" Adicionar ", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Login inválido");
+      const data = await API.login(form.email, form.senha);
+
+      if (!data.token) {
+        throw new Error("Token não recebido");
+      }
+
+      localStorage.setItem("token", data.token);
+
+      window.location.href = "/admin/services";
     } catch (err) {
-      setError("E-mail ou senha inválidos.");
+      setError("E-mail ou senha incorretos.");
     } finally {
       setLoading(false);
     }
@@ -48,8 +39,10 @@ export default function Login() {
       <aside className={styles.brandSection}>
         <img src={logoInovale} alt="Logo Inovale Jr" className={styles.logo} />
       </aside>
+
       <main className={styles.formSection}>
         <h2>Login</h2>
+
         <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor="email">E-mail</label>
           <input
@@ -57,27 +50,26 @@ export default function Login() {
             id="email"
             name="email"
             placeholder="Digite seu e-mail"
-            required
             value={form.email}
             onChange={handleChange}
+            required
           />
 
-          <label htmlFor="password">Senha</label>
+          <label htmlFor="senha">Senha</label>
           <input
             type="password"
-            id="password"
-            name="password"
+            id="senha"
+            name="senha"
             placeholder="Digite sua senha"
-            required
-            value={form.password}
+            value={form.senha}
             onChange={handleChange}
+            required
           />
+
           {error && (
-            <div
-              style={{ color: "#e95c0c", marginTop: 4, fontSize: "0.95rem" }}
-            >
+            <p style={{ color: "#e95c0c", marginTop: 6, fontSize: "0.95rem" }}>
               {error}
-            </div>
+            </p>
           )}
 
           <div className={styles.formOptions}>
@@ -95,6 +87,7 @@ export default function Login() {
             {loading ? "Entrando..." : "Entrar"}
           </button>
         </form>
+
         <div className={styles.links}>
           <span>
             Não tem conta? <a href="/register">Cadastre-se</a>

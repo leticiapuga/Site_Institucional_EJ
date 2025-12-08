@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
 import logoInovale from "../../assets/logo_login_e_cadastro.png";
+import API from "../../services/api";
 
 export default function Register() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -31,13 +32,10 @@ export default function Register() {
       setLoading(false);
       return;
     }
+
     try {
-      const res = await fetch(" Adicionar ", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Erro ao cadastrar");
+      const res = await API.registrar(form.name, form.email, form.password);
+
       setSuccess(true);
       setForm({ name: "", email: "", password: "" });
     } catch (err) {
@@ -52,8 +50,10 @@ export default function Register() {
       <aside className={styles.brandSection}>
         <img src={logoInovale} alt="Logo Inovale Jr" className={styles.logo} />
       </aside>
+
       <main className={styles.formSection}>
         <h2>Cadastro</h2>
+
         <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor="name">Nome</label>
           <input
@@ -87,6 +87,7 @@ export default function Register() {
             value={form.password}
             onChange={handleChange}
           />
+
           {error && (
             <div
               style={{ color: "#e95c0c", marginTop: 4, fontSize: "0.95rem" }}
@@ -106,14 +107,16 @@ export default function Register() {
             type="submit"
             disabled={loading}
           >
-            {loading ? "Cadastrando..." : "Entrar"}
+            {loading ? "Cadastrando..." : "Cadastrar"}
           </button>
+
           {success && (
             <div style={{ color: "#0c3845", marginTop: 8 }}>
               Cadastro realizado com sucesso!
             </div>
           )}
         </form>
+
         <div className={styles.links}>
           <span>
             Já possui cadastro? <a href="/login">Realizar login</a>

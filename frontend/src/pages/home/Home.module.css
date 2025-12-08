@@ -1,32 +1,36 @@
-html,
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
   color: #fff;
-  /* overflow-x: hidden;  */
+  overflow-x: hidden;
 }
 
 .homeContainer {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 0;
 }
 
 .sessaoContainer {
+  width: 100%;
+  min-height: 20rem;
+  max-height: 400px;
+  padding: 3rem 1rem;
+
   display: flex;
   flex-direction: column;
-  align-items: center; /* <- LIBERA largura full */
+  align-items: center;
   justify-content: center;
   text-align: center;
-
-  height: 500px;
-  width: 100%;
 
   background: linear-gradient(
     90deg,
@@ -39,161 +43,133 @@ body {
   color: #ffffff;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+.sessaoContainer h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
-p {
-  font-size: 40px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.sessaoContainer p {
+  font-size: 1.3rem;
+  max-width: 60%;
+  margin: 1rem auto 1.5rem auto;
   font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
 }
 
 .buttonHome {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  width: auto;
-  height: 60px;
 
-  margin-top: 20px;
+  padding: 0.8rem 1.6rem;
+  margin-top: 2rem;
 
   background: #fcfcfc;
   color: #0c3845;
+  font-size: 1rem;
 
-  font-size: 24px;
   border: none;
-
   cursor: pointer;
+  border-radius: 0.4rem;
   transition: background 0.3s ease;
 }
 
 .sessaoSobreNos {
-  display: flex;
-  flex-direction: column;
-
   width: 100%;
-  height: 621px;
+  min-height: 32rem;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  align-items: center;
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: #fff;
 
-  padding: 20px;
+  color: #fff;
 }
 
 .textoSobreNos {
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 20px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .textoSobreNos p {
-  font-size: 26px;
-  font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .sessaoMissaoVisaoValores {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   width: 100%;
-  padding-top: 50px;
-
-  background-color: #ffffff;
+  padding: 4rem 1rem;
+  background: #ffffff;
   color: #0c3845;
-}
-
-.textoDescricao {
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 20px;
-
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 50px;
+  align-items: center;
+}
+
+.textoDescricao {
+  max-width: 80%;
+  margin-bottom: 4rem;
 }
 
 .sessaoMissaoVisaoValores h1 {
-  font-size: 35px;
+  font-size: 2rem;
 }
 
 .sessaoMissaoVisaoValores p {
-  font-size: 30px;
-  font-family: "Urbanist", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .sessaoMissaoVisaoValores img {
-  height: 200px;
-  width: 200px;
-}
-
-.missaoContainer {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  margin-bottom: 50px;
-}
-
-.descricaoMissao {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  flex-wrap: wrap;
-
-  gap: 40px;
-  padding: 30px 40px;
-
-  width: 100%;
-  max-width: 1400px;
-
-  border-radius: 5px;
-  background-color: #f1f1f1;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-}
-
-.iconeMissao {
-  width: 180px;
+  width: 18%;
+  max-width: 120px;
   height: auto;
 }
 
-.descricaoMissao p {
-  font-size: 26px;
-  max-width: 1100px;
+.missaoContainer {
+  width: 90%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 4rem;
+}
+
+.descricaoMissao,
+.descricaoValores {
+  width: 100%;
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+
+  margin: 2rem auto 4rem auto;
+}
+
+.iconeMissao {
+  width: 15%;
+  max-width: 100px;
+  height: auto;
+}
+
+.descricaoMissao p,
+.descricaoValores p {
+  flex: 1;
   color: #000;
-  text-align: left;
+  font-size: 1.1rem;
+  margin-left: 2rem;
 }

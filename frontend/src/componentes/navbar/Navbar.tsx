@@ -3,7 +3,6 @@ import styles from "./Navbar.module.css";
 import logo from "../../assets/logo_inovale.svg";
 
 export default function Navbar() {
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -17,7 +16,7 @@ export default function Navbar() {
           <Link to="/servicos">Serviços</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/members">Nossos membros</Link> {/* aponta para /members */}
+          <Link to="/members">Nossos membros</Link>
         </li>
         <li className={styles.navItem}>
           <Link to="/contactus">Fale conosco</Link>
@@ -26,7 +25,7 @@ export default function Navbar() {
           <Link to="/casosSucesso">Casos de sucesso</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/parcerias">Parcerias</Link>
+          <Link to="/partnerships">Parcerias</Link>
         </li>
       </ul>
       <div className={styles.navbarActions}>
@@ -46,4 +45,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

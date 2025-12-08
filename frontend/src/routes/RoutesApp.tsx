@@ -6,6 +6,7 @@ import Register from "../pages/register/Register";
 import ContactUs from "../pages/contactUs/ContactUs";
 import CasosSucesso from "../pages/casosSucesso/CasosSucesso";
 import Members from "../pages/members/Members";
+import Partnerships from "../pages/partnerships/Partnerships"; 
 
 function RoutesApp() {
   return (
@@ -17,6 +18,8 @@ function RoutesApp() {
       <Route path="/contactus" element={<ContactUs />} />
       <Route path="/casosSucesso" element={<CasosSucesso />} />
       <Route path="/members" element={<Members />} />{" "}
+      <Route path="/partnerships" element={<Partnerships />} />
+
       {/* nova rota em inglês */}
     </Routes>
   );

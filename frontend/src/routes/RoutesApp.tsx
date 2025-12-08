@@ -6,7 +6,12 @@ import Register from "../pages/register/Register";
 import ContactUs from "../pages/contactUs/ContactUs";
 import CasosSucesso from "../pages/casosSucesso/CasosSucesso";
 import Members from "../pages/members/Members";
-import Partnerships from "../pages/partnerships/Partnerships"; 
+import Partnerships from "../pages/partnerships/Partnerships";
+import ServicesAdmin from "../pages/admin/ServicesAdmin";
+import MembersAdmin from "../pages/admin/MembersAdmin";
+import PartnershipsAdmin from "../pages/admin/PartnershipsAdmin";
+import SuccessCasesAdmin from "../pages/admin/SuccessCasesAdmin";
+import MessagesAdmin from "../pages/admin/MessagesAdmin";
 
 function RoutesApp() {
   return (
@@ -19,8 +24,11 @@ function RoutesApp() {
       <Route path="/casosSucesso" element={<CasosSucesso />} />
       <Route path="/members" element={<Members />} />{" "}
       <Route path="/partnerships" element={<Partnerships />} />
-
-      {/* nova rota em inglês */}
+      <Route path="/admin/services" element={<ServicesAdmin />} />
+      <Route path="/admin/members" element={<MembersAdmin />} />
+      <Route path="/admin/partnerships" element={<PartnershipsAdmin />} />
+      <Route path="/admin/success-cases" element={<SuccessCasesAdmin />} />
+      <Route path="/admin/messages" element={<MessagesAdmin />} />
     </Routes>
   );
 }

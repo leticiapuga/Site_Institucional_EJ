@@ -1,6 +1,7 @@
 import styles from "./CardSucesso.module.css";
 import logo from "../../assets/logo_inovale.svg";
 
+
 interface CasosSucessoItemProps {
     titulo: string;
     descricao: string;

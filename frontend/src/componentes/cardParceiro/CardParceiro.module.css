@@ -1,0 +1,35 @@
+.cardContainer {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 32px;
+}
+
+.cardParceiro{
+    background: #eeeeee;
+    width: 220px;
+    height: 250px;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cardImage{
+    width: 140px;
+}
+
+.cardParceiro h1{
+    font-size: 18px;
+    margin-top: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cardParceiro p{
+    font-size: 14px;
+    color: #3b3b3b;
+    margin-top: 4px;
+}

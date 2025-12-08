@@ -26,7 +26,7 @@ export default function Navbar() {
           <Link to="/casosSucesso">Casos de sucesso</Link>
         </li>
         <li className={styles.navItem}>
-          <Link to="/parcerias">Parcerias</Link>
+          <Link to="/partnerships">Parceirias</Link>
         </li>
       </ul>
       <div className={styles.navbarActions}>

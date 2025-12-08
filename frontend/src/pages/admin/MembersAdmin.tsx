@@ -19,7 +19,6 @@ export default function MembersAdmin() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [editForm, setEditForm] = useState({ name: "", role: "" });
 
-  // Preenche o formulário ao selecionar um membro
   function handleSelectEdit(e: React.ChangeEvent<HTMLSelectElement>) {
     const id = Number(e.target.value);
     setSelectedId(id);
@@ -29,12 +28,10 @@ export default function MembersAdmin() {
     }
   }
 
-  // Atualiza campos do formulário de edição
   function handleEditChange(e: React.ChangeEvent<HTMLInputElement>) {
     setEditForm({ ...editForm, [e.target.name]: e.target.value });
   }
 
-  // Salva edição
   function handleEditSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (selectedId === null) return;
@@ -44,7 +41,6 @@ export default function MembersAdmin() {
     alert("Membro editado com sucesso!");
   }
 
-  // Remove membro
   function handleRemove(e: React.FormEvent) {
     e.preventDefault();
     if (selectedId === null) return;

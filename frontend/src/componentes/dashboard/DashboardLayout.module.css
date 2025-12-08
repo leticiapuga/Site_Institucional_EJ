@@ -101,7 +101,6 @@
   background: #f7f7f7;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .dashboardContainer {
     flex-direction: column;

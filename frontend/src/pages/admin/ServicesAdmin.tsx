@@ -9,7 +9,6 @@ interface Service {
   image: string;
 }
 
-// Mock para simular serviços cadastrados
 const mockServices: Service[] = [
   {
     id: 1,
@@ -36,7 +35,6 @@ export default function ServicesAdmin() {
     image: "",
   });
 
-  // Preenche o formulário ao selecionar um serviço
   function handleSelectEdit(e: React.ChangeEvent<HTMLSelectElement>) {
     const id = Number(e.target.value);
     setSelectedId(id);
@@ -50,14 +48,12 @@ export default function ServicesAdmin() {
     }
   }
 
-  // Atualiza campos do formulário de edição
   function handleEditChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     setEditForm({ ...editForm, [e.target.name]: e.target.value });
   }
 
-  // Salva edição
   function handleEditSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (selectedId === null) return;
@@ -67,7 +63,6 @@ export default function ServicesAdmin() {
     alert("Serviço editado com sucesso!");
   }
 
-  // Remove serviço
   function handleRemove(e: React.FormEvent) {
     e.preventDefault();
     if (selectedId === null) return;

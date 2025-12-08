@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 import imageInclude from "../../assets/imageInclude.png";
 import iconeMissao from "../../assets/iconeMissao.png";
 import Navbar from "../../componentes/navbar/Navbar";
+import Footer from "../../componentes/navbar/Footer";
 
 function Home() {
   return (
@@ -60,7 +61,7 @@ function Home() {
             </div>
             <div className={styles.missaoContainer}>
               <h1>Valores</h1>
-              <div className={styles.descricaoMissao}>
+              <div className={styles.descricaoValores}>
                   <img src={iconeMissao} alt="Ícone Missão" className={styles.iconeMissao} />
                   <div>
                     <p>- Senso de dono</p>
@@ -76,6 +77,7 @@ function Home() {
             </div>
     
         </div>
+        <Footer/>
     </div>
   );
 }

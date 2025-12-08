@@ -4,6 +4,7 @@ import Navbar from "../../componentes/navbar/Navbar";
 import styles from "./Servicos.module.css";
 import ImageEstrutura from "../../assets/imageEstrutura.png"; 
 import ServicoItem from "../../componentes/servicoItem/ServicoItem";
+import Footer from '../../componentes/navbar/Footer';
 
 
 interface ServicoData {
@@ -72,30 +73,34 @@ function Servicos() {
     
     // 4. Renderização
     return (
-        <div className={styles.servicosContainer}>
-            <Navbar />
-            <div className={styles.conhecerContainer}>
-                <h1>Conheça nossos Serviços</h1>
-                <p> Oferecemos a você soluções em Engenharia Mecânica voltadas para a indústria, unindo técnica, eficiência e inovação. Atuamos no desenvolvimento e melhoria de processos, equipamentos e produtos, sempre buscando aumentar a produtividade e reduzir custos operacionais.</p>
-            </div>
+        <div>
+            <div className={styles.servicosContainer}>
+                <Navbar />
+                <div className={styles.conhecerContainer}>
+                    <h1>Conheça nossos Serviços</h1>
+                    <p> Oferecemos a você soluções em Engenharia Mecânica voltadas para a indústria, unindo técnica, eficiência e inovação. Atuamos no desenvolvimento e melhoria de processos, equipamentos e produtos, sempre buscando aumentar a produtividade e reduzir custos operacionais.</p>
+                </div>
 
-            <div className={styles.servicosList}>
-                {servicos.map((servico, index) => (
-                    <ServicoItem
-                        key={servico.id}
-                        titulo={servico.titulo}
-                        descricao={servico.descricao}
-                        botaoTexto="Saiba mais"
-                        imagemSrc={servico.imagemSrc}
-                        
-                        imagemEsquerda={index % 2 !== 0} 
-                        
-                        onClick={() => handleButtonClick(servico.id)} 
-                    />
-                ))}
+                <div className={styles.servicosList}>
+                    {servicos.map((servico, index) => (
+                        <ServicoItem
+                            key={servico.id}
+                            titulo={servico.titulo}
+                            descricao={servico.descricao}
+                            botaoTexto="Saiba mais"
+                            imagemSrc={servico.imagemSrc}
+                            
+                            imagemEsquerda={index % 2 !== 0} 
+                            
+                            onClick={() => handleButtonClick(servico.id)} 
+                        />
+                    ))}
+                </div>
+                
             </div>
-            
+            <Footer/>
         </div>
+        
     );
 }
 

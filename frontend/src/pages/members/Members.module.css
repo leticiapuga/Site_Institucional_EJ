@@ -8,6 +8,7 @@
 }
 .page {
   width: 100%;
+  margin-top: 20px;
 }
 .container {
   width: 100%;
@@ -46,7 +47,7 @@
 .subtitle {
   text-align: center;
   color: #0c3845;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   margin-bottom: 28px;
   font-family: "Urbanist", sans-serif;
 }

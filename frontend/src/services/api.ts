@@ -1,4 +1,5 @@
-const API_BASE = "https://site-institucional-ej.onrender.com";
+// Deixamos vazio para que ele use a URL relativa (mesmo domínio do site)
+const API_BASE = "";
 
 async function apiRequest(
   endpoint: string,
@@ -12,8 +13,13 @@ async function apiRequest(
 
   if (auth) {
     const token = localStorage.getItem("token");
-    if (!token) throw new Error("Token não encontrado");
-    headers["Authorization"] = `Bearer ${token}`;
+    if (!token) {
+      // Opcional: Redirecionar para login se não houver token
+      console.warn("Token não encontrado para requisição autenticada"); 
+      // throw new Error("Token não encontrado"); // Descomente se quiser forçar o erro
+    } else {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
   }
 
   const config: RequestInit = {
@@ -21,10 +27,21 @@ async function apiRequest(
     headers,
   };
 
-  if (body) config.body = JSON.stringify(body);
+  if (body) {
+    config.body = JSON.stringify(body);
+  }
 
+  // O fetch vai montar a URL assim: "https://seu-site.com" + "" + "/auth/entrar"
   const response = await fetch(`${API_BASE}${endpoint}`, config);
-  const data = await response.json();
+  
+  // Tratamento para quando a resposta não é JSON (ex: erro 500 do servidor ou 404 HTML)
+  const contentType = response.headers.get("content-type");
+  let data;
+  if (contentType && contentType.indexOf("application/json") !== -1) {
+    data = await response.json();
+  } else {
+    data = { message: await response.text() };
+  }
 
   if (!response.ok) {
     throw new Error(data?.message || "Erro ao acessar a API");

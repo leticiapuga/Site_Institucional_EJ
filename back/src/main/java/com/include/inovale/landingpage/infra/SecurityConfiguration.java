@@ -73,6 +73,40 @@ public class SecurityConfiguration {
                         .requestMatchers(HttpMethod.GET, "/parceria").permitAll()
                         .requestMatchers(HttpMethod.GET, "/parceria/*").permitAll()
 
+
+                        // -----------------------------------------------------------
+                        // REGRAS DE ARQUIVOS ESTÁTICOS (ARQUIVOS REAIS)
+                        // -----------------------------------------------------------
+                        // Libera tudo que tem cara de arquivo (imagens, css, js)
+                        .requestMatchers(
+                            "/", 
+                            "/index.html", 
+                            "/vite.svg", 
+                            "/assets/**", 
+                            "/*.js", 
+                            "/*.css", 
+                            "/*.png", 
+                            "/*.jpg",
+                            "/*.svg",
+                            "/*.ico"
+                        ).permitAll()
+
+                        // -----------------------------------------------------------
+                        // REGRAS DE NAVEGAÇÃO DO REACT (PÁGINAS DO FRONT)
+                        // -----------------------------------------------------------
+                        // Baseado nas pastas que você mostrou no 'ls'. 
+                        // Se o usuário acessar direto pelo link, o Spring deixa passar.
+                        .requestMatchers(
+                            "/login", 
+                            "/register", 
+                            "/home", 
+                            "/servicos", 
+                            "/contactUs",      // Ou "/fale-conosco", dependendo do seu Route
+                            "/casosSucesso",   // Ajuste conforme está no seu RoutesApp.tsx
+                            "/partnerships",   // Ajuste se sua rota for /parcerias
+                            "/members"         // Ajuste se sua rota for /membros
+                        ).permitAll()
+
                         // --- QUALQUER OUTRA ROTA ---
                         // Precisa de login (Token)
                         .anyRequest().authenticated()

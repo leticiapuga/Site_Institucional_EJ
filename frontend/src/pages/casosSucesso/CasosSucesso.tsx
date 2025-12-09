@@ -2,7 +2,7 @@
 import Navbar from "../../componentes/navbar/Navbar";
 import styles from "./CasosSucesso.module.css";
 import Footer from "../../componentes/navbar/Footer";
-import CardSucesso from "../../componentes/cardSucesso/cardSucesso";
+import CardSucesso from "../../componentes/cardSucesso/CardSucesso";
 import logo from "../../assets/logo_inovale.svg";
 
 function CasosSucesso() {

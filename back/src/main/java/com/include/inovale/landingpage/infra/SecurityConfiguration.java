@@ -75,36 +75,37 @@ public class SecurityConfiguration {
 
 
                         // -----------------------------------------------------------
-                        // REGRAS DE ARQUIVOS ESTÁTICOS (ARQUIVOS REAIS)
+                        // REGRAS DE ARQUIVOS ESTÁTICOS 
                         // -----------------------------------------------------------
-                        // Libera tudo que tem cara de arquivo (imagens, css, js)
+                        
                         .requestMatchers(
                             "/", 
                             "/index.html", 
+                            "/error",
                             "/vite.svg", 
                             "/assets/**", 
                             "/*.js", 
                             "/*.css", 
                             "/*.png", 
-                            "/*.jpg",
-                            "/*.svg",
+                            "/*.jpg", 
+                            "/*.svg", 
                             "/*.ico"
                         ).permitAll()
 
                         // -----------------------------------------------------------
-                        // REGRAS DE NAVEGAÇÃO DO REACT (PÁGINAS DO FRONT)
+                        // REGRAS DE NAVEGAÇÃO DO REACT (PÁGINAS)
                         // -----------------------------------------------------------
-                        // Baseado nas pastas que você mostrou no 'ls'. 
-                        // Se o usuário acessar direto pelo link, o Spring deixa passar.
                         .requestMatchers(
+                            // Rotas Públicas
                             "/login", 
                             "/register", 
-                            "/home", 
                             "/servicos", 
-                            "/contactUs",      // Ou "/fale-conosco", dependendo do seu Route
-                            "/casosSucesso",   // Ajuste conforme está no seu RoutesApp.tsx
-                            "/partnerships",   // Ajuste se sua rota for /parcerias
-                            "/members"         // Ajuste se sua rota for /membros
+                            "/contactus",
+                            "/casosSucesso",   
+                            "/partnerships",   
+                            "/members",         
+
+                            "/admin/**"
                         ).permitAll()
 
                         // --- QUALQUER OUTRA ROTA ---

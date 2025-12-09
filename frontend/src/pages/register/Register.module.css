@@ -1,0 +1,158 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.brandSection {
+  background: #0c3845;
+  color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.logo {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #fff;
+}
+
+.formSection h2 {
+  color: #e95c0c;
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-size: 1rem;
+  color: #0c3845;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #f2f2f2;
+  font-size: 1rem;
+}
+
+.formOptions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.formOptions label {
+  color: #acacac;
+}
+
+.buttonLogin {
+  background: #0c3845;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 90px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 12px auto 0 auto;
+  transition: background 0.2s;
+  width: fit-content;
+  min-width: 120px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.buttonLogin:hover {
+  background: #e95c0c;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  transform: translateY(-1px) scale(1.03);
+}
+
+.links {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #acacac;
+}
+
+.links a {
+  color: #0c3845;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #e95c0c;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .brandSection,
+  .formSection {
+    flex: unset;
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 420px;
+  }
+  .form {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    min-height: calc(100vh - 65px);
+  }
+  .brandSection,
+  .formSection {
+    padding: 24px 16px;
+    min-height: 280px;
+  }
+  .logo {
+    width: 300px;
+  }
+  .form {
+    max-width: 90vw;
+    gap: 14px;
+  }
+  button {
+    padding: 12px 80px;
+    font-size: 0.95rem;
+  }
+}

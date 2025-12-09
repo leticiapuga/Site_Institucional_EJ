@@ -1,0 +1,177 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.homeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessaoContainer {
+  width: 100%;
+  min-height: 20rem;
+  max-height: 400px;
+  padding: 3rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    #ee7802 0%,
+    #d9830a 33%,
+    #725e27 80%,
+    #0c3845 100%
+  );
+
+  color: #ffffff;
+}
+
+.sessaoContainer h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.sessaoContainer p {
+  font-size: 1.3rem;
+  max-width: 60%;
+  margin: 1rem auto 1.5rem auto;
+  font-family: "Urbanist", sans-serif;
+}
+
+.buttonHome {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem 1.6rem;
+  margin-top: 2rem;
+
+  background: #fcfcfc;
+  color: #0c3845;
+  font-size: 1rem;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  transition: background 0.3s ease;
+}
+
+.sessaoSobreNos {
+  width: 100%;
+  min-height: 32rem;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  color: #fff;
+}
+
+.textoSobreNos {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.textoSobreNos p {
+  font-size: 1.2rem;
+}
+
+.sessaoMissaoVisaoValores {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: #ffffff;
+  color: #0c3845;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textoDescricao {
+  max-width: 80%;
+  margin-bottom: 4rem;
+}
+
+.sessaoMissaoVisaoValores h1 {
+  font-size: 2rem;
+}
+
+.sessaoMissaoVisaoValores p {
+  font-size: 1.2rem;
+}
+
+.sessaoMissaoVisaoValores img {
+  width: 18%;
+  max-width: 120px;
+  height: auto;
+}
+
+.missaoContainer {
+  width: 100%;
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 4rem;
+}
+
+.descricaoMissao,
+.descricaoValores {
+  width: 60%;
+  padding: 3rem 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+
+  margin: 2rem auto 4rem auto;
+}
+
+.iconeMissao {
+  width: 15%;
+  max-width: 100px;
+  height: auto;
+}
+
+.descricaoMissao p,
+.descricaoValores p {
+  flex: 1;
+  color: #000;
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  
+}
+

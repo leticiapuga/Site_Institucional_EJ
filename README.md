@@ -2,6 +2,7 @@
 Este repositório contém a solução de um desafio trainee da Include Jr., empresa júnior de tecnologia da UFC - Campus de Russas. O objetivo foi desenvolver o site institucional da Inovale, empresa júnior de Engenharia Mecânica.
 
 ---
+- Link da elicitação de requisitos (https://docs.google.com/document/d/1IL8RIdbZuERfuiO6Ecc2O6XUYXK-Abi2/edit)
 
 ## Funcionalidades
 

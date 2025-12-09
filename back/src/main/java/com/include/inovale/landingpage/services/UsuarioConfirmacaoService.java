@@ -41,8 +41,9 @@ public class UsuarioConfirmacaoService {
             );
         }
 
+        UsuarioConfirmacaoEntity usuarioConfirmacao = usuarioConfirmacaoRepository.findByUsuario(usuarioEntity);
 
-        UsuarioConfirmacaoEntity usuarioConfirmacao = new UsuarioConfirmacaoEntity();
+        if( usuarioConfirmacao == null ) usuarioConfirmacao = new UsuarioConfirmacaoEntity();
         
         usuarioConfirmacao.setUsuario(usuarioEntity);
         usuarioConfirmacao.setDataExpiracao(

@@ -40,20 +40,23 @@ public class AutenticacaoService {
 
         
         
+        // CRIANDO O OBJETO QUE SERÁ GUARDADA NO BANCO DE DADOS
+        UsuarioEntity usuarioEntity;
+        usuarioEntity = usuarioMapper.reqRegistrarUsuarioDTOToEntity(usuarioDTO);
+        
+        
         // PROCURANDO POR UM REGISTRO DE USUÁRIO COM O E-MAIL INFORMADO
         UsuarioEntity usuario = (UsuarioEntity) usuarioRepository.findByEmail(usuarioDTO.getEmail());
-        if (usuario != null) {
+        if (usuario != null && usuario.getEstadoUsuario() != UsuarioEstadoEnum.PENDENTE) {
             // PARANDO A EXECUÇÃO DO MÉTODO CASO O E-MAIL SEJA DE OUTRO USUÁRIO
             throw new ResponseStatusException(
                 HttpStatus.BAD_REQUEST,
                 "O e-mail informado já está em uso!"
             );
+        }else if(usuario != null){
+            usuarioEntity.setId(usuario.getId());
         }
-        
-        // CRIANDO O OBJETO QUE SERÁ GUARDADA NO BANCO DE DADOS
-        UsuarioEntity usuarioEntity;
-        usuarioEntity = usuarioMapper.reqRegistrarUsuarioDTOToEntity(usuarioDTO);
-        
+
         // DEFININDO O ESTADO PADRÃO DO USUÁRIO
         usuarioEntity.setEstadoUsuario(UsuarioEstadoEnum.PENDENTE);
 

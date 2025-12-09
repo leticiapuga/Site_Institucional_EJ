@@ -8,11 +8,27 @@
   width: 220px;
   background: #0c3845;
   color: #fff;
-  padding: 40px 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
+}
+
+
+
+.imgicon {
+  height: 30px;
+  width: auto;
+  display: block;
+  padding-left: 5px;
+}
+
+.imglogo{
+  height: 45px;
+  width: auto;
+  display: block;
+  padding-left: 5px;
 }
 
 .sidebar nav ul {

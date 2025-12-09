@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./DashboardLayout.module.css";
+import logo from "../../assets/logo_inovale.svg";
 
 interface DashboardLayoutProps {
   title: string;
@@ -16,9 +17,11 @@ export default function DashboardLayout({
   return (
     <div className={styles.dashboardContainer}>
       <aside className={styles.sidebar}>
+        <img src={logo} alt="Logo" className={styles.imglogo}/>
         <nav>
           <ul>
             <li>
+              
               <a href="/admin/services">Serviços</a>
             </li>
             <li>

@@ -5,6 +5,11 @@ import styles from "./Servicos.module.css";
 import ImageEstrutura from "../../assets/imageEstrutura.png";
 import ServicoItem from "../../componentes/servicoItem/ServicoItem";
 import Footer from "../../componentes/navbar/Footer";
+import Analisecusto from "../../assets/analise_custo.png";
+import Imgplanejamento from "../../assets/img_planejamento.png";
+import Imgmapeamento from "../../assets/img_mapeamento.png";
+
+
 
 interface ServicoData {
   id: number;
@@ -23,24 +28,24 @@ const mockServicos: ServicoData[] = [
   },
   {
     id: 2,
-    titulo: "Consultoria em Engenharia",
+    titulo: "Análise de custos",
     descricao:
-      "Análise detalhada do seu modelo de negócio para identificar gargalos e oportunidades de crescimento. Garanta que cada decisão contribua para seus objetivos de longo prazo na indústria mecânica.",
-    imagemSrc: ImageEstrutura,
+      "Ideal para negócios que buscam controle e monitoramento dos gastos, identificar onde e como os recursos estão sendo utilizados, reduzir desperdícios e aumentar a lucratividade. Essa solução também contribui para uma precificação mais assertiva dos produtos e decisões gerenciais mais eficientes.",
+    imagemSrc: Analisecusto,
   },
   {
     id: 3,
-    titulo: "Desenvolvimento de Produtos",
+    titulo: "Planejamento estratégico",
     descricao:
-      "Transformamos suas ideias em produtos viáveis, aplicando design thinking e técnicas avançadas de engenharia para otimizar a fabricação e a funcionalidade.",
-    imagemSrc: ImageEstrutura,
+      "Apropriado para empresas que tem o objetivo de entender o seu posicionamento no mercado e que busca se destacar. O planejamento auxilia na tomada de decisão, desenvolvendo os recursos para alcançar suas estratégias.",
+    imagemSrc: Imgplanejamento,
   },
   {
     id: 4,
-    titulo: "Gestão de Projetos Industriais",
+    titulo: "Mapeamento de processos",
     descricao:
-      "Desde a concepção até a entrega, garantimos que seus projetos industriais sejam concluídos no prazo, dentro do orçamento e com o mais alto padrão de qualidade.",
-    imagemSrc: ImageEstrutura,
+      "Ideal para empresas que buscam otimizar a operação, padronizar atividades e eliminar falhas. Essa solução traz mais eficiência, controle e clareza nos processos, reduzindo custos e identificando pontos de melhoria.",
+    imagemSrc: Imgmapeamento,
   },
 ];
 
@@ -76,7 +81,6 @@ function Servicos() {
     );
   }
 
-  // 4. Renderização
   return (
     <div>
       <div className={styles.servicosContainer}>

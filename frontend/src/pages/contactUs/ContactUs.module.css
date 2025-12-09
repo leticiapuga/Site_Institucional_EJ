@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   min-height: 80vh;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +21,7 @@
 
 .subtitle {
   color: #0c3845;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   margin-bottom: 32px;
   font-family: "Poppins", Arial, sans-serif;
